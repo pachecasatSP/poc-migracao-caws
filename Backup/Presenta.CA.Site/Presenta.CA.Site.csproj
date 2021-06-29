@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{966F275F-121F-41BC-B191-9FEDB1282417}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Controle_Acesso</RootNamespace>
+    <AssemblyName>Controle_Acesso</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CryptoNET">
+      <HintPath>..\..\..\..\Program Files (x86)\CryptoTools\CryptoNET\bin\CryptoNET.dll</HintPath>
+    </Reference>
+    <Reference Include="Presenta.Security.Encryption">
+      <HintPath>..\Presenta.Security.Encryption.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aplicativo_cadastro.aspx" />
+    <Content Include="aplicativo_filtro.aspx" />
+    <Content Include="controls\ucData.ascx" />
+    <Content Include="controls\ucDropDownList.ascx" />
+    <Content Include="controls\ucToolbar.ascx" />
+    <Content Include="default.aspx" />
+    <Content Include="funcionalidade_cadastro.aspx" />
+    <Content Include="funcionalidade_filtro.aspx" />
+    <Content Include="funcionalidade_perfil_associacao_01.aspx" />
+    <Content Include="funcionalidade_perfil_associacao_02.aspx" />
+    <Content Include="funcionalidade_perfil_cadastro.aspx" />
+    <Content Include="funcionalidade_perfil_filtro.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\arrow.gif" />
+    <Content Include="images\botao_calendario.gif" />
+    <Content Include="images\botleft.jpg" />
+    <Content Include="images\botright.jpg" />
+    <Content Include="images\bt_blue_center.gif" />
+    <Content Include="images\bt_blue_left.gif" />
+    <Content Include="images\bt_blue_r.gif" />
+    <Content Include="images\bt_green_center.gif" />
+    <Content Include="images\bt_green_left.gif" />
+    <Content Include="images\bt_green_r.gif" />
+    <Content Include="images\bt_red_center.gif" />
+    <Content Include="images\bt_red_left.gif" />
+    <Content Include="images\bt_red_r.gif" />
+    <Content Include="images\bubble.png" />
+    <Content Include="images\button.png" />
+    <Content Include="images\buttonn.png" />
+    <Content Include="images\buttony.png" />
+    <Content Include="images\comment.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\delete_pb.png" />
+    <Content Include="images\edit-clear.png" />
+    <Content Include="images\edit-clear_pb.png" />
+    <Content Include="images\error.png" />
+    <Content Include="images\footer_bg.jpg" />
+    <Content Include="images\green_bt.gif" />
+    <Content Include="images\green_bt_a.gif" />
+    <Content Include="images\help.png" />
+    <Content Include="images\info.png" />
+    <Content Include="images\left.jpg" />
+    <Content Include="images\list_bullet.gif" />
+    <Content Include="images\login_bg.png" />
+    <Content Include="images\logo_presenta.jpg" />
+    <Content Include="images\menubg1.jpg" />
+    <Content Include="images\menubg1_black.jpg" />
+    <Content Include="images\menubg1_gray.jpg" />
+    <Content Include="images\menubg2.jpg" />
+    <Content Include="images\menubg2_gray.jpg" />
+    <Content Include="images\menu_bg.gif" />
+    <Content Include="images\menu_bg.jpg" />
+    <Content Include="images\menu_bg_a.gif" />
+    <Content Include="images\minus.gif" />
+    <Content Include="images\new.gif" />
+    <Content Include="images\notice.png" />
+    <Content Include="images\pagingfirst.gif" />
+    <Content Include="images\paginglast.gif" />
+    <Content Include="images\pagingpext.gif" />
+    <Content Include="images\pagingprev.gif" />
+    <Content Include="images\photo.png" />
+    <Content Include="images\plus-icon.png" />
+    <Content Include="images\plus.gif" />
+    <Content Include="images\process.gif" />
+    <Content Include="images\red_bt.gif" />
+    <Content Include="images\red_bt_a.gif" />
+    <Content Include="images\removeicon.jpg" />
+    <Content Include="images\right.jpg" />
+    <Content Include="images\save.png" />
+    <Content Include="images\save_pb.png" />
+    <Content Include="images\search.png" />
+    <Content Include="images\search_pb.png" />
+    <Content Include="images\Sem título.png" />
+    <Content Include="images\sidebar_box_bottom.gif" />
+    <Content Include="images\sidebar_box_top.gif" />
+    <Content Include="images\sidebar_menu_top.gif" />
+    <Content Include="images\sidebar_menu_top_a.gif" />
+    <Content Include="images\trash.png" />
+    <Content Include="images\user_edit.png" />
+    <Content Include="images\valid.png" />
+    <Content Include="images\voltar.gif" />
+    <Content Include="images\voltar.png" />
+    <Content Include="images\voltar_pb.gif" />
+    <Content Include="images\warning.png" />
+    <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="operador_cadastro.aspx" />
+    <Content Include="operador_filtro.aspx" />
+    <Content Include="perfil_cadastro.aspx" />
+    <Content Include="perfil_filtro.aspx" />
+    <Content Include="perfil_operador_associacao_01.aspx" />
+    <Content Include="perfil_operador_associacao_02.aspx" />
+    <Content Include="perfil_operador_cadastro.aspx" />
+    <Content Include="perfil_operador_filtro.aspx" />
+    <Content Include="Scripts\ddaccordion.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="sistema_cadastro.aspx" />
+    <Content Include="sistema_filtro.aspx" />
+    <Content Include="situacao_funcionalidade_cadastro.aspx" />
+    <Content Include="situacao_funcionalidade_filtro.aspx" />
+    <Content Include="situacao_funcionalidade_perfil_cadastro.aspx" />
+    <Content Include="situacao_funcionalidade_perfil_filtro.aspx" />
+    <Content Include="situacao_operador_cadastro.aspx" />
+    <Content Include="situacao_operador_filtro.aspx" />
+    <Content Include="situacao_perfil_cadastro.aspx" />
+    <Content Include="situacao_perfil_filtro.aspx" />
+    <Content Include="situacao_perfil_operador_cadastro.aspx" />
+    <Content Include="situacao_perfil_operador_filtro.aspx" />
+    <Content Include="styles\style.css" />
+    <Content Include="tipo_senha_tipo_senha_validacao_associacao_01.aspx" />
+    <Content Include="tipo_senha_tipo_senha_validacao_associacao_02.aspx" />
+    <Content Include="tipo_senha_tipo_senha_validacao_cadastro.aspx" />
+    <Content Include="tipo_senha_tipo_senha_validacao_filtro.aspx" />
+    <Content Include="tipo_senha_cadastro.aspx" />
+    <Content Include="tipo_senha_filtro.aspx" />
+    <Content Include="tipo_senha_validacao_cadastro.aspx" />
+    <Content Include="tipo_senha_validacao_filtro.aspx" />
+    <Content Include="troca_senha.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aplicativo_cadastro.aspx.cs">
+      <DependentUpon>aplicativo_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aplicativo_cadastro.aspx.designer.cs">
+      <DependentUpon>aplicativo_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aplicativo_filtro.aspx.cs">
+      <DependentUpon>aplicativo_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aplicativo_filtro.aspx.designer.cs">
+      <DependentUpon>aplicativo_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cls\clsLog.cs" />
+    <Compile Include="cls\clsAplicativo.cs" />
+    <Compile Include="cls\clsCA.cs" />
+    <Compile Include="cls\clsDB.cs" />
+    <Compile Include="cls\clsEntAplicativo.cs" />
+    <Compile Include="cls\clsEntFuncionalidade.cs" />
+    <Compile Include="cls\clsEntFuncionalidadePerfil.cs" />
+    <Compile Include="cls\clsEntOperador.cs" />
+    <Compile Include="cls\clsEntPerfil.cs" />
+    <Compile Include="cls\clsEntPerfilOperador.cs" />
+    <Compile Include="cls\clsEntSistema.cs" />
+    <Compile Include="cls\clsEntSituacaoFuncionalidade.cs" />
+    <Compile Include="cls\clsEntSituacaoOperador.cs" />
+    <Compile Include="cls\clsEntSituacaoPerfil.cs" />
+    <Compile Include="cls\clsEntSituacaoPerfilOperador.cs" />
+    <Compile Include="cls\clsEntTipoSenha.cs" />
+    <Compile Include="cls\clsEntTipoSenhaTipoSenhaValidacao.cs" />
+    <Compile Include="cls\clsFuncionalidade.cs" />
+    <Compile Include="cls\clsFuncionalidadePerfil.cs" />
+    <Compile Include="cls\clsMensagem.cs" />
+    <Compile Include="cls\clsOperador.cs" />
+    <Compile Include="cls\clsPerfil.cs" />
+    <Compile Include="cls\clsPerfilOperador.cs" />
+    <Compile Include="cls\clsSistema.cs" />
+    <Compile Include="cls\clsSituacaoFuncionalidade.cs" />
+    <Compile Include="cls\clsEntSituacaoFuncionalidadePerfil.cs" />
+    <Compile Include="cls\clsSituacaoFuncionalidadePerfil.cs" />
+    <Compile Include="cls\clsSituacaoOperador.cs" />
+    <Compile Include="cls\clsSituacaoPerfil.cs" />
+    <Compile Include="cls\clsSituacaoPerfilOperador.cs" />
+    <Compile Include="cls\clsEntTipoSenhaValidacao.cs" />
+    <Compile Include="cls\clsTipoSenha.cs" />
+    <Compile Include="cls\clsTipoSenhaTipoSenhaValidacao.cs" />
+    <Compile Include="cls\clsTipoSenhaValidacao.cs" />
+    <Compile Include="controle_acesso.master.cs">
+      <DependentUpon>controle_acesso.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controle_acesso.master.designer.cs">
+      <DependentUpon>controle_acesso.master</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ucData.ascx.cs">
+      <DependentUpon>ucData.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ucData.ascx.designer.cs">
+      <DependentUpon>ucData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ucDropDownList.ascx.cs">
+      <DependentUpon>ucDropDownList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ucDropDownList.ascx.designer.cs">
+      <DependentUpon>ucDropDownList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ucToolbar.ascx.cs">
+      <DependentUpon>ucToolbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ucToolbar.ascx.designer.cs">
+      <DependentUpon>ucToolbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="funcionalidade_cadastro.aspx.cs">
+      <DependentUpon>funcionalidade_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="funcionalidade_cadastro.aspx.designer.cs">
+      <DependentUpon>funcionalidade_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="funcionalidade_filtro.aspx.cs">
+      <DependentUpon>funcionalidade_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="funcionalidade_filtro.aspx.designer.cs">
+      <DependentUpon>funcionalidade_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="funcionalidade_perfil_associacao_01.aspx.cs">
+      <DependentUpon>funcionalidade_perfil_associacao_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="funcionalidade_perfil_associacao_01.aspx.designer.cs">
+      <DependentUpon>funcionalidade_perfil_associacao_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="funcionalidade_perfil_associacao_02.aspx.cs">
+      <DependentUpon>funcionalidade_perfil_associacao_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="funcionalidade_perfil_associacao_02.aspx.designer.cs">
+      <DependentUpon>funcionalidade_perfil_associacao_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="funcionalidade_perfil_cadastro.aspx.cs">
+      <DependentUpon>funcionalidade_perfil_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="funcionalidade_perfil_cadastro.aspx.designer.cs">
+      <DependentUpon>funcionalidade_perfil_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="funcionalidade_perfil_filtro.aspx.cs">
+      <DependentUpon>funcionalidade_perfil_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="funcionalidade_perfil_filtro.aspx.designer.cs">
+      <DependentUpon>funcionalidade_perfil_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="operador_cadastro.aspx.cs">
+      <DependentUpon>operador_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="operador_cadastro.aspx.designer.cs">
+      <DependentUpon>operador_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="operador_filtro.aspx.cs">
+      <DependentUpon>operador_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="operador_filtro.aspx.designer.cs">
+      <DependentUpon>operador_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="perfil_cadastro.aspx.cs">
+      <DependentUpon>perfil_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfil_cadastro.aspx.designer.cs">
+      <DependentUpon>perfil_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="perfil_filtro.aspx.cs">
+      <DependentUpon>perfil_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfil_filtro.aspx.designer.cs">
+      <DependentUpon>perfil_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="perfil_operador_associacao_01.aspx.cs">
+      <DependentUpon>perfil_operador_associacao_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfil_operador_associacao_01.aspx.designer.cs">
+      <DependentUpon>perfil_operador_associacao_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="perfil_operador_associacao_02.aspx.cs">
+      <DependentUpon>perfil_operador_associacao_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfil_operador_associacao_02.aspx.designer.cs">
+      <DependentUpon>perfil_operador_associacao_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="perfil_operador_cadastro.aspx.cs">
+      <DependentUpon>perfil_operador_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfil_operador_cadastro.aspx.designer.cs">
+      <DependentUpon>perfil_operador_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="perfil_operador_filtro.aspx.cs">
+      <DependentUpon>perfil_operador_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfil_operador_filtro.aspx.designer.cs">
+      <DependentUpon>perfil_operador_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sistema_cadastro.aspx.cs">
+      <DependentUpon>sistema_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sistema_cadastro.aspx.designer.cs">
+      <DependentUpon>sistema_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sistema_filtro.aspx.cs">
+      <DependentUpon>sistema_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sistema_filtro.aspx.designer.cs">
+      <DependentUpon>sistema_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="situacao_funcionalidade_cadastro.aspx.cs">
+      <DependentUpon>situacao_funcionalidade_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="situacao_funcionalidade_cadastro.aspx.designer.cs">
+      <DependentUpon>situacao_funcionalidade_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="situacao_funcionalidade_filtro.aspx.cs">
+      <DependentUpon>situacao_funcionalidade_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="situacao_funcionalidade_filtro.aspx.designer.cs">
+      <DependentUpon>situacao_funcionalidade_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="situacao_funcionalidade_perfil_cadastro.aspx.cs">
+      <DependentUpon>situacao_funcionalidade_perfil_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="situacao_funcionalidade_perfil_cadastro.aspx.designer.cs">
+      <DependentUpon>situacao_funcionalidade_perfil_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="situacao_funcionalidade_perfil_filtro.aspx.cs">
+      <DependentUpon>situacao_funcionalidade_perfil_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="situacao_funcionalidade_perfil_filtro.aspx.designer.cs">
+      <DependentUpon>situacao_funcionalidade_perfil_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="situacao_operador_cadastro.aspx.cs">
+      <DependentUpon>situacao_operador_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="situacao_operador_cadastro.aspx.designer.cs">
+      <DependentUpon>situacao_operador_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="situacao_operador_filtro.aspx.cs">
+      <DependentUpon>situacao_operador_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="situacao_operador_filtro.aspx.designer.cs">
+      <DependentUpon>situacao_operador_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="situacao_perfil_cadastro.aspx.cs">
+      <DependentUpon>situacao_perfil_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="situacao_perfil_cadastro.aspx.designer.cs">
+      <DependentUpon>situacao_perfil_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="situacao_perfil_filtro.aspx.cs">
+      <DependentUpon>situacao_perfil_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="situacao_perfil_filtro.aspx.designer.cs">
+      <DependentUpon>situacao_perfil_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="situacao_perfil_operador_cadastro.aspx.cs">
+      <DependentUpon>situacao_perfil_operador_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="situacao_perfil_operador_cadastro.aspx.designer.cs">
+      <DependentUpon>situacao_perfil_operador_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="situacao_perfil_operador_filtro.aspx.cs">
+      <DependentUpon>situacao_perfil_operador_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="situacao_perfil_operador_filtro.aspx.designer.cs">
+      <DependentUpon>situacao_perfil_operador_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_senha_tipo_senha_validacao_associacao_01.aspx.cs">
+      <DependentUpon>tipo_senha_tipo_senha_validacao_associacao_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tipo_senha_tipo_senha_validacao_associacao_01.aspx.designer.cs">
+      <DependentUpon>tipo_senha_tipo_senha_validacao_associacao_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_senha_tipo_senha_validacao_associacao_02.aspx.cs">
+      <DependentUpon>tipo_senha_tipo_senha_validacao_associacao_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tipo_senha_tipo_senha_validacao_associacao_02.aspx.designer.cs">
+      <DependentUpon>tipo_senha_tipo_senha_validacao_associacao_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_senha_tipo_senha_validacao_cadastro.aspx.cs">
+      <DependentUpon>tipo_senha_tipo_senha_validacao_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tipo_senha_tipo_senha_validacao_cadastro.aspx.designer.cs">
+      <DependentUpon>tipo_senha_tipo_senha_validacao_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_senha_tipo_senha_validacao_filtro.aspx.cs">
+      <DependentUpon>tipo_senha_tipo_senha_validacao_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tipo_senha_tipo_senha_validacao_filtro.aspx.designer.cs">
+      <DependentUpon>tipo_senha_tipo_senha_validacao_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_senha_cadastro.aspx.cs">
+      <DependentUpon>tipo_senha_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tipo_senha_cadastro.aspx.designer.cs">
+      <DependentUpon>tipo_senha_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_senha_filtro.aspx.cs">
+      <DependentUpon>tipo_senha_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tipo_senha_filtro.aspx.designer.cs">
+      <DependentUpon>tipo_senha_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_senha_validacao_cadastro.aspx.cs">
+      <DependentUpon>tipo_senha_validacao_cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tipo_senha_validacao_cadastro.aspx.designer.cs">
+      <DependentUpon>tipo_senha_validacao_cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tipo_senha_validacao_filtro.aspx.cs">
+      <DependentUpon>tipo_senha_validacao_filtro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tipo_senha_validacao_filtro.aspx.designer.cs">
+      <DependentUpon>tipo_senha_validacao_filtro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="troca_senha.aspx.cs">
+      <DependentUpon>troca_senha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="troca_senha.aspx.designer.cs">
+      <DependentUpon>troca_senha.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="controle_acesso.master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55390</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

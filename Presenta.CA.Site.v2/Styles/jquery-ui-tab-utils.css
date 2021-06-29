@@ -1,0 +1,7 @@
+﻿/* Comment this rule out to see what happens if you forget to define it (hide wont work) */
+li.ui-state-default.ui-state-hidden[role=tab]:not(.ui-tabs-active) {
+    display: none;
+}
+.ui-state-hidden {
+    display: none;
+}

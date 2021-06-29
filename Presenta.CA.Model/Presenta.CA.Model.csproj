@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB90B92A-D727-4FCC-A8C5-97EACA5ACE6B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presenta.CA.Model</RootNamespace>
+    <AssemblyName>Presenta.CA.Model</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Presenta.Common">
+      <HintPath>Z:\dados\Componentes.NET\Presenta.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Presenta.DBConnection">
+      <HintPath>Z:\dados\Componentes.NET\Presenta.DBConnection.dll</HintPath>
+    </Reference>
+    <Reference Include="Presenta.Util.ActiveDirectory">
+      <HintPath>Z:\dados\Componentes.NET\Presenta.Util.ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CaAplicativoModel.cs" />
+    <Compile Include="CaConfiguracaoModel.cs" />
+    <Compile Include="CaFuncionalidadeExecutadaModel.cs" />
+    <Compile Include="CaFuncionalidadeModel.cs" />
+    <Compile Include="CaFuncionalidadePerfilModel.cs" />
+    <Compile Include="CaHistoricoSenhaModel.cs" />
+    <Compile Include="CaLogDetalheModel.cs" />
+    <Compile Include="CaLogModel.cs" />
+    <Compile Include="CaOperadorModel.cs" />
+    <Compile Include="CaPerfilOperadorModel.cs" />
+    <Compile Include="CaSistemaModel.cs" />
+    <Compile Include="CaSituacaoFuncionalidadeModel.cs" />
+    <Compile Include="CaSituacaoFuncionalidadePerfilModel.cs" />
+    <Compile Include="CaSituacaoOperadorModel.cs" />
+    <Compile Include="CaSituacaoPerfilModel.cs" />
+    <Compile Include="CaSituacaoPerfilOperadorModel.cs" />
+    <Compile Include="CaTipoSenhaModel.cs" />
+    <Compile Include="CaTipoSenhaTipoSenhaValidacaoModel.cs" />
+    <Compile Include="CaTipoSenhaValidacaoModel.cs" />
+    <Compile Include="CaPerfilModel.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Enum\CaSituacaoFuncionalidadeEnum.cs" />
+    <Compile Include="Enum\CaSituacaoFuncionalidadePerfilEnum.cs" />
+    <Compile Include="Enum\CaSituacaoOperadorEnum.cs" />
+    <Compile Include="Enum\CaSituacaoPerfilEnum.cs" />
+    <Compile Include="Enum\CaSituacaoPerfilOperadorEnum.cs" />
+    <Compile Include="Enum\CaTipoLogEnum.cs" />
+    <Compile Include="Enum\CaTipoLogonEnum.cs" />
+    <Compile Include="CaOperadorFlyWeight.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RptLogModel.cs" />
+    <Compile Include="RptPerfilFuncionalidadeModel.cs" />
+    <Compile Include="RptPerfilOperadorModel.cs" />
+    <Compile Include="RptSisAplFunModel.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

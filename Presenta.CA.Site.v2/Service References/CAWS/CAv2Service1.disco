@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://ps5000/CAWSV3/CAv2Service.asmx?wsdl" docRef="http://ps5000/CAWSV3/CAv2Service.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://ps5000/CAWSV3/CAv2Service.asmx" xmlns:q1="http://presenta.com.br/webservices/" binding="q1:CAv2ServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://ps5000/CAWSV3/CAv2Service.asmx" xmlns:q2="http://presenta.com.br/webservices/" binding="q2:CAv2ServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

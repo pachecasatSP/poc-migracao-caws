@@ -1,0 +1,9 @@
+﻿.mGrid { width: 100%; background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; }
+    .mGrid td { padding: 2px; border: solid 1px #10428C; color: #10428C; }
+    .mGrid th { padding: 4px 2px; color: #fff; background: #424242 url(../Images/grd_head_blue.png) repeat-x top; border-left: solid 1px #525252; font-size: 1.0em; }
+.mGrid .alt { background: #fcfcfc url(../Images/grd_alt_blue.png) repeat-x top; }
+.mGrid .pgr {background: #4876AC url(../Images/grd_pgr_blue.png) repeat-x top; }
+    .mGrid .pgr table { margin: 5px 0; }
+    .mGrid .pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #10428C; font-weight: bold; color: #fff; line-height: 12px; }   
+    .mGrid .pgr a { color: #10428C; text-decoration: none; }
+    .mGrid .pgr a:hover { color: #fff; text-decoration: none; }

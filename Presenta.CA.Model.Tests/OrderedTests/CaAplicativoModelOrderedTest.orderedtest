@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest1" storage="c:\presenta\projetos\controleacesso\code\presenta.ca\presenta.ca.model.tests\orderedtests\orderedtest1.orderedtest" id="04b47abe-0d66-46f6-98d7-3d62629ec185" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="983a38fe-6d50-3240-fb4d-34f77e512fec" name="TestarListar" storage="..\bin\release\presenta.ca.model.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="cf644d19-e7e8-5195-ec11-17d9e7b76bbc" name="TestarSelecionar" storage="..\bin\release\presenta.ca.model.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="527e7c39-3c86-da42-872e-0865fa5129b3" name="TestarInserir" storage="..\bin\release\presenta.ca.model.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="1dbb214f-d362-f676-9e59-ff5d9f2d2006" name="TestarAtualizar" storage="..\bin\release\presenta.ca.model.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="b6086ca1-ec13-bd1e-7e43-15617212507e" name="TestarExcluir" storage="..\bin\release\presenta.ca.model.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

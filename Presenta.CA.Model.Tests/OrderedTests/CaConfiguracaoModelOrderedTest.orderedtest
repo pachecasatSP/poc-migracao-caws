@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest1" storage="c:\presenta\projetos\controleacesso\code\presenta.ca\presenta.ca.model.tests\orderedtests\orderedtest1.orderedtest" id="6aeff2cd-5f14-4e0d-8eec-b9013c05d3f6" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="27192877-047e-de5c-b70d-1128339242f2" name="TestarSelecionar" storage="..\bin\release\presenta.ca.model.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="15f5533e-3bc4-a66f-9df4-a6eff58b513a" name="TestarAtualizar" storage="..\bin\release\presenta.ca.model.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

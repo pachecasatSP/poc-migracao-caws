@@ -1,0 +1,49 @@
+﻿.toolbar
+{
+	height:25px;
+	margin:0px 5px;
+	background-image:url('../Images/toolbar_bg.png'); background-repeat:repeat-x;
+	float:left;
+}
+
+.toolbarLeft
+{
+	background-image:url('../Images/toolbar_left.png'); background-repeat:no-repeat;
+	height:25px;
+	width:7px;
+	float:left;
+}
+
+.toolbarRight
+{
+	background-image:url('../Images/toolbar_right.png'); background-repeat:no-repeat;
+	height:25px;
+	width:12px;	
+	float:left;
+}
+
+.toolbarContent
+{
+	padding:5px;
+	float:left;
+	height:25px;
+}
+
+.toolbarContent img
+{
+	vertical-align:top;
+	border:0px;
+	margin-right:5px;
+}
+
+.toolbarContent a,.toolbarContent a:visited
+{
+	padding:5px;
+	color:#000000;
+	text-decoration:none;
+}
+
+.toolbarContent a:hover
+{
+	background-color:#FFE88C;
+}

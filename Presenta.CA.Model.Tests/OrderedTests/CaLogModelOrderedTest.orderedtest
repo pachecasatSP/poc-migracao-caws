@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest1" storage="c:\presenta\projetos\controleacesso\code\presenta.ca\presenta.ca.model.tests\orderedtests\orderedtest1.orderedtest" id="8095fa0e-2467-464e-a1a1-7d386f8aba89" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="d159b831-a804-3acc-b905-a320f02a98e6" name="TestarInserirInfo" storage="..\bin\release\presenta.ca.model.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="e324c680-89a2-1b32-9eca-c7dd34e692f9" name="TestarInserirErroMensagemMenorQue100" storage="..\bin\release\presenta.ca.model.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="1963c447-6b8f-0277-112d-f2493a07b554" name="TestarInserirErroMensagemMaiorQue100" storage="..\bin\release\presenta.ca.model.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="1f70ea98-f0d2-0a7c-ca39-83b64bd002d4" name="TestarListar" storage="..\bin\release\presenta.ca.model.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

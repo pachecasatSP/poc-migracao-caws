@@ -1,0 +1,853 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7ACFB584-0A09-47B6-81EF-845D2C60E14F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presenta.CA.Site</RootNamespace>
+    <AssemblyName>Presenta.CA.Site</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Presenta.Common, Version=1.5.23.149, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\dados\Componentes.NET\Presenta.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Presenta.DBConnection, Version=1.6.11.19, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\dados\Componentes.NET\Presenta.DBConnection.dll</HintPath>
+    </Reference>
+    <Reference Include="Presenta.Util.ActiveDirectory, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\dados\Componentes.NET\Presenta.Util.ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="Presenta.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\dados\Componentes.NET\Presenta.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Presenta.Web.JqGrid, Version=1.2.5.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\dados\Componentes.NET\Presenta.Web.JqGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>Z:\dados\Componentes.NET\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccessDenied.aspx" />
+    <Content Include="AcessoRestrito.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Icons\favicon.ico" />
+    <Content Include="IdleTimer.aspx" />
+    <Content Include="IdleTimer.html" />
+    <Content Include="Images\14.png" />
+    <Content Include="Images\21-pb.png" />
+    <Content Include="Images\21.png" />
+    <Content Include="Images\21pb.png" />
+    <Content Include="Images\24-pb.png" />
+    <Content Include="Images\24.png" />
+    <Content Include="Images\24pb.png" />
+    <Content Include="Images\28.png" />
+    <Content Include="Images\31.png" />
+    <Content Include="Images\40.png" />
+    <Content Include="Images\41.png" />
+    <Content Include="Images\45-pb.png" />
+    <Content Include="Images\45.png" />
+    <Content Include="Images\45pb.png" />
+    <Content Include="Images\48.png" />
+    <Content Include="Images\51.png" />
+    <Content Include="Images\54.png" />
+    <Content Include="Images\61.png" />
+    <Content Include="Images\72.png" />
+    <Content Include="Images\accept.png" />
+    <Content Include="Images\access_denied.png" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\alarm-24x24.png" />
+    <Content Include="Images\application_form.png" />
+    <Content Include="Images\application_side_tree.png" />
+    <Content Include="Images\application_view_list.png" />
+    <Content Include="Images\application_xp_terminal.png" />
+    <Content Include="Images\arrow_join.png" />
+    <Content Include="Images\arrow_left.png" />
+    <Content Include="Images\arrow_out.png" />
+    <Content Include="Images\arrow_refresh.png" />
+    <Content Include="Images\arrow_refresh_small.png" />
+    <Content Include="Images\auction_hammer.png" />
+    <Content Include="Images\auction_hammer_exclamation.png" />
+    <Content Include="Images\auction_hammer_gavel.png" />
+    <Content Include="Images\BarChart.png" />
+    <Content Include="Images\bin_closed-pb.png" />
+    <Content Include="Images\bin_closed.png" />
+    <Content Include="Images\building.png" />
+    <Content Include="Images\button_bg.png" />
+    <Content Include="Images\calendar_view_month.png" />
+    <Content Include="Images\cancel-pb.png" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\ccs.png" />
+    <Content Include="Images\check-48x48.png" />
+    <Content Include="Images\check48.png" />
+    <Content Include="Images\client-list24x24.png" />
+    <Content Include="Images\clock-24x24.png" />
+    <Content Include="Images\coins.png" />
+    <Content Include="Images\company.png" />
+    <Content Include="Images\company_generosity.png" />
+    <Content Include="Images\compare.png" />
+    <Content Include="Images\control_end_blue.png" />
+    <Content Include="Images\control_play_blue.png" />
+    <Content Include="Images\control_play_blue_2.png" />
+    <Content Include="Images\control_start_blue.png" />
+    <Content Include="Images\cross.png" />
+    <Content Include="Images\cut.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\door.png" />
+    <Content Include="Images\em-construcao.png" />
+    <Content Include="Images\Email.png" />
+    <Content Include="Images\email2.png" />
+    <Content Include="Images\email_go.png" />
+    <Content Include="Images\email_open.png" />
+    <Content Include="Images\error_go-pb.png" />
+    <Content Include="Images\error_go.png" />
+    <Content Include="Images\error_notify.png" />
+    <Content Include="Images\export.png" />
+    <Content Include="Images\filter_16x16.gif" />
+    <Content Include="Images\find-pb.png" />
+    <Content Include="Images\find.png" />
+    <Content Include="Images\folder.png" />
+    <Content Include="Images\folder_delete.png" />
+    <Content Include="Images\folder_explore.png" />
+    <Content Include="Images\forward.png" />
+    <Content Include="Images\future-projects.png" />
+    <Content Include="Images\gear24x24.png" />
+    <Content Include="Images\grd_alt_blue.png" />
+    <Content Include="Images\grd_head_blue.png" />
+    <Content Include="Images\grd_pgr_blue.png" />
+    <Content Include="Images\group.png" />
+    <Content Include="Images\hist_nav_left.png" />
+    <Content Include="Images\hist_nav_left_blue.png" />
+    <Content Include="Images\hist_nav_right.png" />
+    <Content Include="Images\hist_nav_right_blue.png" />
+    <Content Include="Images\hourglass.png" />
+    <Content Include="Images\ico_collapse1.gif" />
+    <Content Include="Images\ico_collapse2.gif" />
+    <Content Include="Images\import.png" />
+    <Content Include="Images\info48x48.png" />
+    <Content Include="Images\inputchangepw.png" />
+    <Content Include="Images\inputlogin.png" />
+    <Content Include="Images\integration.ico" />
+    <Content Include="Images\key.png" />
+    <Content Include="Images\letter-24x24.png" />
+    <Content Include="Images\lightning-pb.png" />
+    <Content Include="Images\lightning.png" />
+    <Content Include="Images\list-24x24.png" />
+    <Content Include="Images\lists-24x24.png" />
+    <Content Include="Images\loading48x48.gif" />
+    <Content Include="Images\lock.png" />
+    <Content Include="Images\lock_delete.png" />
+    <Content Include="Images\log.png" />
+    <Content Include="Images\loginWebjudBackground.png" />
+    <Content Include="Images\loginWebjudBackgroundRounded.png" />
+    <Content Include="Images\loginWebjudBackgroundRoundedLogoPresenta.png" />
+    <Content Include="Images\logopresenta_ca.png" />
+    <Content Include="Images\logopresenta_ca_header.png" />
+    <Content Include="Images\logopresenta_ca_header2.png" />
+    <Content Include="Images\magnifier-pb.png" />
+    <Content Include="Images\magnifier.png" />
+    <Content Include="Images\Modify.png" />
+    <Content Include="Images\money.png" />
+    <Content Include="Images\monitoring.png" />
+    <Content Include="Images\nav_link.png" />
+    <Content Include="Images\nav_link_hover.png" />
+    <Content Include="Images\nav_link_selected.png" />
+    <Content Include="Images\nav_separator.png" />
+    <Content Include="Images\notes24x24.png" />
+    <Content Include="Images\numbered-list-24x24.png" />
+    <Content Include="Images\opcoes-globais.png" />
+    <Content Include="Images\open-letter-24x24.png" />
+    <Content Include="Images\Outlook.png" />
+    <Content Include="Images\package.png" />
+    <Content Include="Images\page_bg.png" />
+    <Content Include="Images\page_delete.png" />
+    <Content Include="Images\page_key.png" />
+    <Content Include="Images\page_white_copy.png" />
+    <Content Include="Images\page_white_delete.png" />
+    <Content Include="Images\page_white_edit.png" />
+    <Content Include="Images\page_white_get-pb.png" />
+    <Content Include="Images\page_white_get.png" />
+    <Content Include="Images\page_white_go-pb.png" />
+    <Content Include="Images\page_white_go.png" />
+    <Content Include="Images\page_white_magnify.png" />
+    <Content Include="Images\page_white_paste.png" />
+    <Content Include="Images\paginaemconstrucao01.jpg" />
+    <Content Include="Images\paginaemconstrucao02.gif" />
+    <Content Include="Images\pencil.png" />
+    <Content Include="Images\printer-pb.png" />
+    <Content Include="Images\printer.png" />
+    <Content Include="Images\report.png" />
+    <Content Include="Images\report24x24.png" />
+    <Content Include="Images\resultset_first.png" />
+    <Content Include="Images\resultset_last.png" />
+    <Content Include="Images\resultset_next.png" />
+    <Content Include="Images\resultset_previous.png" />
+    <Content Include="Images\Rotate360AntiClockwise2Red.png" />
+    <Content Include="Images\scales.png" />
+    <Content Include="Images\script.png" />
+    <Content Include="Images\script_code.png" />
+    <Content Include="Images\script_gear.png" />
+    <Content Include="Images\search.ico" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\send-receive.png" />
+    <Content Include="Images\shield_grey.png" />
+    <Content Include="Images\sign-out.png" />
+    <Content Include="Images\sta.ico" />
+    <Content Include="Images\sta.png" />
+    <Content Include="Images\subheader_bg.png" />
+    <Content Include="Images\table_go.png" />
+    <Content Include="Images\table_key.png" />
+    <Content Include="Images\table_row_delete.png" />
+    <Content Include="Images\table_row_insert.png" />
+    <Content Include="Images\telephone.png" />
+    <Content Include="Images\tick.png" />
+    <Content Include="Images\toolbar_bg.png" />
+    <Content Include="Images\toolbar_bg_blue.png" />
+    <Content Include="Images\toolbar_left.png" />
+    <Content Include="Images\toolbar_right.png" />
+    <Content Include="Images\umbrella.png" />
+    <Content Include="Images\user.png" />
+    <Content Include="Images\util.png" />
+    <Content Include="Images\world.png" />
+    <Content Include="Images\world_edit.png" />
+    <Content Include="Images\zoom.png" />
+    <Content Include="KeepAlive.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="LogoutWA.aspx" />
+    <Content Include="MasterPages\Main.Master" />
+    <Content Include="Pages\Associacao\Operador.aspx" />
+    <Content Include="Pages\Associacao\Perfil.aspx" />
+    <Content Include="Pages\Associacao\PerfilFuncionalidade.aspx" />
+    <Content Include="Pages\Cadastro\Operador.aspx" />
+    <Content Include="Pages\Cadastro\Perfil.aspx" />
+    <Content Include="Pages\Cadastro\PerfilFuncionalidade.aspx" />
+    <Content Include="Pages\Cadastro\Sistemas.aspx" />
+    <Content Include="Pages\Configuracao\Geral.aspx" />
+    <Content Include="Pages\Relatorio\PerfilFuncionalidade.aspx" />
+    <Content Include="Pages\Relatorio\PerfilOperador.aspx" />
+    <Content Include="Pages\Relatorio\Sistemas.aspx" />
+    <Content Include="Pages\Relatorio\Log.aspx" />
+    <Content Include="Scripts\ca-relat.js" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\i18n\grid.locale-pt-br.3.8.2.js" />
+    <Content Include="Scripts\i18n\grid.locale-pt-br.4.4.4.js" />
+    <Content Include="Scripts\idle-timer.js" />
+    <Content Include="Scripts\idle-timer.min.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.0.min.js" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8rc1.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-i18n.min.js" />
+    <Content Include="Scripts\jquery-ui-tab-utils.js" />
+    <Content Include="Scripts\jquery-utils.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.contextMenu.js" />
+    <Content Include="Scripts\jquery.contextMenuOld.js" />
+    <Content Include="Scripts\jquery.idletimer.js" />
+    <Content Include="Scripts\jquery.jqGrid.3.8.2.min.js" />
+    <Content Include="Scripts\jquery.jqGrid.4.4.4.min.js" />
+    <Content Include="Scripts\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\jquery.jqGrid.src.js" />
+    <Content Include="Scripts\jquery.maskedinput.js" />
+    <Content Include="Scripts\jquery.maskedinput.min.js" />
+    <Content Include="Scripts\jquery.meio.mask.min.js" />
+    <Content Include="Scripts\jquery.taphold.js" />
+    <Content Include="Scripts\jquery.tipsy.js" />
+    <Content Include="Scripts\jquery.ui-contextmenu.js" />
+    <Content Include="Scripts\jquery.ui.datepicker.min.js" />
+    <Content Include="Scripts\jquery.ui.position.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\main-master.js" />
+    <Content Include="Scripts\ui.spinner.js" />
+    <None Include="Service References\CAWS\CAv2Service1.wsdl" />
+    <None Include="Service References\CAWS\configuration91.svcinfo" />
+    <None Include="Service References\CAWS\configuration.svcinfo" />
+    <None Include="Service References\CAWS\CAv2Service1.disco" />
+    <Content Include="Service References\CAWS\Presenta.CA.Site.CAWS.ArrayOfInt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CAWS\Presenta.CA.Site.CAWS.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CAWS\Presenta.CA.Site.CAWS.AplicativoFlyWeight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CAWS\Presenta.CA.Site.CAWS.CaOperadorFlyWeight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CAWS\Presenta.CA.Site.CAWS.OperadorFlyWeight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CAWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\PublishProfiles\CA-V2.pubxml" />
+    <Content Include="Styles\blitzer\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Content Include="Styles\blitzer\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Content Include="Styles\blitzer\images\ui-bg_flat_0_333333_40x100.png" />
+    <Content Include="Styles\blitzer\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="Styles\blitzer\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Styles\blitzer\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Content Include="Styles\blitzer\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Content Include="Styles\blitzer\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Content Include="Styles\blitzer\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Content Include="Styles\blitzer\images\ui-icons_004276_256x240.png" />
+    <Content Include="Styles\blitzer\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Styles\blitzer\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\blitzer\jquery-ui-1.9.2.custom.css" />
+    <Content Include="Styles\blitzer\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="Styles\humanity\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Styles\humanity\images\ui-bg_glass_100_f5f0e5_1x400.png" />
+    <Content Include="Styles\humanity\images\ui-bg_glass_25_cb842e_1x400.png" />
+    <Content Include="Styles\humanity\images\ui-bg_glass_70_ede4d4_1x400.png" />
+    <Content Include="Styles\humanity\images\ui-bg_highlight-hard_100_f4f0ec_1x100.png" />
+    <Content Include="Styles\humanity\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="Styles\humanity\images\ui-bg_highlight-hard_75_f5f5b5_1x100.png" />
+    <Content Include="Styles\humanity\images\ui-bg_inset-soft_100_f4f0ec_1x100.png" />
+    <Content Include="Styles\humanity\images\ui-icons_c47a23_256x240.png" />
+    <Content Include="Styles\humanity\images\ui-icons_cb672b_256x240.png" />
+    <Content Include="Styles\humanity\images\ui-icons_f08000_256x240.png" />
+    <Content Include="Styles\humanity\images\ui-icons_f35f07_256x240.png" />
+    <Content Include="Styles\humanity\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="Styles\humanity\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\humanity\jquery-ui-1.9.2.custom.css" />
+    <Content Include="Styles\humanity\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="Styles\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Styles\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Styles\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Styles\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Styles\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Styles\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Styles\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Styles\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Styles\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Styles\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Styles\smoothness\jquery-ui-1.9.2.custom.css" />
+    <Content Include="Styles\smoothness\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="Styles\south-street\images\ui-bg_glass_55_fcf0ba_1x400.png" />
+    <Content Include="Styles\south-street\images\ui-bg_gloss-wave_100_ece8da_500x100.png" />
+    <Content Include="Styles\south-street\images\ui-bg_highlight-hard_100_f5f3e5_1x100.png" />
+    <Content Include="Styles\south-street\images\ui-bg_highlight-hard_100_fafaf4_1x100.png" />
+    <Content Include="Styles\south-street\images\ui-bg_highlight-hard_15_459e00_1x100.png" />
+    <Content Include="Styles\south-street\images\ui-bg_highlight-hard_95_cccccc_1x100.png" />
+    <Content Include="Styles\south-street\images\ui-bg_highlight-soft_25_67b021_1x100.png" />
+    <Content Include="Styles\south-street\images\ui-bg_highlight-soft_95_ffedad_1x100.png" />
+    <Content Include="Styles\south-street\images\ui-bg_inset-soft_15_2b2922_1x100.png" />
+    <Content Include="Styles\south-street\images\ui-icons_808080_256x240.png" />
+    <Content Include="Styles\south-street\images\ui-icons_847e71_256x240.png" />
+    <Content Include="Styles\south-street\images\ui-icons_8DC262_256x240.png" />
+    <Content Include="Styles\south-street\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Styles\south-street\images\ui-icons_eeeeee_256x240.png" />
+    <Content Include="Styles\south-street\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\south-street\jquery-ui-1.9.2.custom.css" />
+    <Content Include="Styles\south-street\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="Styles\start\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Styles\start\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Styles\start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Styles\start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Styles\start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Styles\start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Styles\start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Styles\start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Styles\start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Styles\start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Styles\start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Styles\start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Styles\start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Styles\start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Styles\start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Styles\start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Styles\start\jquery-ui-1.9.2.custom.css" />
+    <Content Include="Styles\start\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Styles\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Styles\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Styles\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Styles\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Styles\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\ui-lightness\jquery-ui-1.9.2.custom.css" />
+    <Content Include="Styles\ui-lightness\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="TrocaSenha.aspx" />
+    <Content Include="UserControls\AplicativoUC.ascx" />
+    <Content Include="UserControls\FuncionalidadeUCL.ascx" />
+    <Content Include="UserControls\FuncionalidadeUCR.ascx" />
+    <Content Include="UserControls\FuncionalidadeUC.ascx" />
+    <Content Include="UserControls\OperadorUC.ascx" />
+    <Content Include="UserControls\OperadorUCL.ascx" />
+    <Content Include="UserControls\OperadorUCR.ascx" />
+    <Content Include="UserControls\PerfilUCHandler.ashx" />
+    <Content Include="UserControls\OperadorUCHandler.ashx" />
+    <Content Include="UserControls\PerfilUCL.ascx" />
+    <Content Include="UserControls\PerfilUCR.ascx" />
+    <Content Include="UserControls\SistemaUC.ascx" />
+    <Content Include="UserControls\SistemaUCHandler.ashx" />
+    <Content Include="UserControls\AplicativoUCHandler.ashx" />
+    <Content Include="UserControls\FuncionalidadeUCHandler.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Styles\Content.css" />
+    <Content Include="Styles\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Styles\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Styles\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Styles\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Styles\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\cupertino\jquery-ui-1.8.23.custom.css" />
+    <Content Include="Styles\cupertino\jquery-ui-1.9.2.custom.css" />
+    <Content Include="Styles\cupertino\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="Styles\ellipsis-xbl.xml" />
+    <Content Include="Styles\GridViewAction.css" />
+    <Content Include="Styles\GridViewBlue.css" />
+    <Content Include="Styles\Inicial.css" />
+    <Content Include="Styles\jquery-ui-tab-utils.css" />
+    <Content Include="Styles\jquery.contextMenu.css" />
+    <Content Include="Styles\Login.css" />
+    <Content Include="Styles\Main.css" />
+    <Content Include="Styles\Navigation.css" />
+    <Content Include="Styles\tipsy.css" />
+    <Content Include="Styles\Toolbar.css" />
+    <Content Include="Styles\ui.jqgrid.3.8.2.css" />
+    <Content Include="Styles\ui.jqgrid.4.4.4.css" />
+    <Content Include="Styles\ui.jqgrid.css" />
+    <Content Include="Styles\ui.spinner.css" />
+    <Content Include="UserControls\ActionBar.ascx" />
+    <Content Include="UserControls\PerfilUC.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AcessoRestrito.aspx.cs">
+      <DependentUpon>AcessoRestrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcessoRestrito.aspx.designer.cs">
+      <DependentUpon>AcessoRestrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\AcessoGeralEnum.cs" />
+    <Compile Include="Enums\ActionBarEnum.cs" />
+    <Compile Include="Enums\GrandMenuEnum.cs" />
+    <Compile Include="Enums\Pages\AssociacoesFuncionalidadePerfilEnum.cs" />
+    <Compile Include="Enums\Pages\AssociacoesPerfilFuncionalidadeEnum.cs" />
+    <Compile Include="Enums\Pages\AssociacoesPerfilOperadorEnum.cs" />
+    <Compile Include="Enums\Pages\CadastroOperadorEnum.cs" />
+    <Compile Include="Enums\Pages\CadastroPerfilEnum.cs" />
+    <Compile Include="Enums\Pages\CadastroPerfilFuncionalidadeEnum.cs" />
+    <Compile Include="Enums\Pages\CadastroSistemaAplicativoFuncionalidadeEnum.cs" />
+    <Compile Include="Enums\Pages\ConfiguracaoGeralEnum.cs" />
+    <Compile Include="Enums\Pages\RelatorioLogEnum.cs" />
+    <Compile Include="Enums\Pages\RelatorioPerfilFuncionalidadeEnum.cs" />
+    <Compile Include="Enums\Pages\RelatorioPerfilOperadorEnum.cs" />
+    <Compile Include="Enums\Pages\RelatorioSistemaAplicativoFuncionalidadeEnum.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IdleTimer.aspx.cs">
+      <DependentUpon>IdleTimer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IdleTimer.aspx.designer.cs">
+      <DependentUpon>IdleTimer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KeepAlive.aspx.cs">
+      <DependentUpon>KeepAlive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KeepAlive.aspx.designer.cs">
+      <DependentUpon>KeepAlive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogoutWA.aspx.cs">
+      <DependentUpon>LogoutWA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogoutWA.aspx.designer.cs">
+      <DependentUpon>LogoutWA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Base\MasterPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Items\LinkButtonPageItem.cs" />
+    <Compile Include="MasterPages\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Associacao\Operador.aspx.cs">
+      <DependentUpon>Operador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Associacao\Operador.aspx.designer.cs">
+      <DependentUpon>Operador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Associacao\Perfil.aspx.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Associacao\Perfil.aspx.designer.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Associacao\PerfilFuncionalidade.aspx.cs">
+      <DependentUpon>PerfilFuncionalidade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Associacao\PerfilFuncionalidade.aspx.designer.cs">
+      <DependentUpon>PerfilFuncionalidade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Base\ISecurityBase.cs" />
+    <Compile Include="Pages\Base\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Cadastro\Operador.aspx.cs">
+      <DependentUpon>Operador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Cadastro\Operador.aspx.designer.cs">
+      <DependentUpon>Operador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cadastro\Perfil.aspx.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Cadastro\Perfil.aspx.designer.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cadastro\PerfilFuncionalidade.aspx.cs">
+      <DependentUpon>PerfilFuncionalidade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Cadastro\PerfilFuncionalidade.aspx.designer.cs">
+      <DependentUpon>PerfilFuncionalidade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cadastro\Sistemas.aspx.cs">
+      <DependentUpon>Sistemas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Cadastro\Sistemas.aspx.designer.cs">
+      <DependentUpon>Sistemas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Configuracao\Geral.aspx.cs">
+      <DependentUpon>Geral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Configuracao\Geral.aspx.designer.cs">
+      <DependentUpon>Geral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Relatorio\PerfilFuncionalidade.aspx.cs">
+      <DependentUpon>PerfilFuncionalidade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Relatorio\PerfilFuncionalidade.aspx.designer.cs">
+      <DependentUpon>PerfilFuncionalidade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Relatorio\PerfilOperador.aspx.cs">
+      <DependentUpon>PerfilOperador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Relatorio\PerfilOperador.aspx.designer.cs">
+      <DependentUpon>PerfilOperador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Relatorio\Sistemas.aspx.cs">
+      <DependentUpon>Sistemas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Relatorio\Sistemas.aspx.designer.cs">
+      <DependentUpon>Sistemas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Relatorio\Log.aspx.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Relatorio\Log.aspx.designer.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\CAWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TrocaSenha.aspx.cs">
+      <DependentUpon>TrocaSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrocaSenha.aspx.designer.cs">
+      <DependentUpon>TrocaSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ActionBar.ascx.cs">
+      <DependentUpon>ActionBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ActionBar.ascx.designer.cs">
+      <DependentUpon>ActionBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AplicativoUC.ascx.cs">
+      <DependentUpon>AplicativoUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AplicativoUC.ascx.designer.cs">
+      <DependentUpon>AplicativoUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AplicativoUCHandler.ashx.cs">
+      <DependentUpon>AplicativoUCHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FuncionalidadeUCL.ascx.cs">
+      <DependentUpon>FuncionalidadeUCL.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FuncionalidadeUCL.ascx.designer.cs">
+      <DependentUpon>FuncionalidadeUCL.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FuncionalidadeUCR.ascx.cs">
+      <DependentUpon>FuncionalidadeUCR.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FuncionalidadeUCR.ascx.designer.cs">
+      <DependentUpon>FuncionalidadeUCR.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FuncionalidadeUC.ascx.cs">
+      <DependentUpon>FuncionalidadeUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FuncionalidadeUC.ascx.designer.cs">
+      <DependentUpon>FuncionalidadeUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FuncionalidadeUCHandler.ashx.cs">
+      <DependentUpon>FuncionalidadeUCHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OperadorUC.ascx.cs">
+      <DependentUpon>OperadorUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\OperadorUC.ascx.designer.cs">
+      <DependentUpon>OperadorUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OperadorUCHandler.ashx.cs">
+      <DependentUpon>OperadorUCHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OperadorUCL.ascx.cs">
+      <DependentUpon>OperadorUCL.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\OperadorUCL.ascx.designer.cs">
+      <DependentUpon>OperadorUCL.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OperadorUCR.ascx.cs">
+      <DependentUpon>OperadorUCR.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\OperadorUCR.ascx.designer.cs">
+      <DependentUpon>OperadorUCR.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PerfilUC.ascx.cs">
+      <DependentUpon>PerfilUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PerfilUC.ascx.designer.cs">
+      <DependentUpon>PerfilUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PerfilUCHandler.ashx.cs">
+      <DependentUpon>PerfilUCHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PerfilUCL.ascx.cs">
+      <DependentUpon>PerfilUCL.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PerfilUCL.ascx.designer.cs">
+      <DependentUpon>PerfilUCL.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PerfilUCR.ascx.cs">
+      <DependentUpon>PerfilUCR.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PerfilUCR.ascx.designer.cs">
+      <DependentUpon>PerfilUCR.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SistemaUC.ascx.cs">
+      <DependentUpon>SistemaUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SistemaUC.ascx.designer.cs">
+      <DependentUpon>SistemaUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SistemaUCHandler.ashx.cs">
+      <DependentUpon>SistemaUCHandler.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CAWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pages\Relatorio\LogReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pages\Relatorio\PerfilFuncionalidadeReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pages\Relatorio\PerfilOperadorReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pages\Relatorio\SistApliFuncReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Presenta.CA.Model\Presenta.CA.Model.csproj">
+      <Project>{db90b92a-d727-4fcc-a8c5-97eaca5ace6b}</Project>
+      <Name>Presenta.CA.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60529</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59294/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

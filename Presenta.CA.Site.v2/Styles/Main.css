@@ -1,0 +1,274 @@
+﻿body, html
+{
+	height:100%;
+	margin: 0px auto;
+}
+
+body
+{
+	margin: 0px;
+	text-align: left;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #d9d9d9;
+	background-image:url('../Images/page_bg.png'); background-repeat:repeat-x;
+	min-width:980px;
+}
+
+.header
+{
+	padding:15px 5px;
+}
+
+.header div
+{
+	float:right;
+	padding:5px 0px;
+}
+
+.header div a
+{
+	color:#FFD800;
+}
+
+.header img, .navPanel img, .navSelect img
+{
+	vertical-align:middle;
+	margin:0px 5px 0px 0px;
+	border:none;
+}
+
+.subHeader
+{
+	background-image:url('../Images/subheader_bg.png'); background-repeat:repeat-x;
+	height:27px;
+}
+
+.subHeader div
+{
+	/*padding:5px;*/
+	padding: 5px 5px 0px 5px;
+	font-size:14px;
+	font-weight:bold;
+	color:#000000;
+}
+
+.subHeaderContent
+{
+	background-image:url('../Images/subheader_bg.png'); background-repeat:repeat-x;
+	height:25px;
+	padding:4px;
+	float:left;
+}
+
+.subHeaderContent div
+{
+	font-size:12px;
+	font-weight:bold;
+	color:White;
+}
+
+.clear
+{
+	clear:both;
+	float:none;
+	height:0px;
+}
+
+.title
+{
+	font-size:18px;
+	font-weight:bold;
+    /*color: whitesmoke;*/
+    color: rgb(255, 232, 140);
+	padding:0px 5px;
+}
+
+.version
+{
+	font-size:12px;
+	font-weight:bold;
+    /*color: whitesmoke;*/
+    color: rgb(255, 232, 140);
+	padding:0px 5px;
+}
+
+.link-presenta
+{
+    color:#ffffff;
+    text-decoration:none;
+}
+
+.link-app
+{
+    color:#10428C;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.link-app:hover
+{
+    color:#ff6a00;
+    text-decoration:underline;
+}
+
+.link-presenta:hover
+{
+    color:#ffd800;
+    text-decoration:underline;
+}
+
+.link-sair
+{
+    text-decoration:none;
+}
+
+.link-sair:hover
+{
+    text-decoration:underline;
+}
+
+div.growlUI
+{
+    background: url('../Images/check-48x48.png') no-repeat 10px 10px;
+}
+
+div.growlUI h1, div.growlUI h2, div.growlUI h3
+{
+	color: white; 
+	padding: 5px 5px 5px 75px; 
+	text-align: left;
+}
+
+div.growlUIInfo
+{
+    background: url('../Images/info48x48.png') no-repeat 10px 10px;
+}
+
+div.growlUIInfo h1, div.growlUIInfo h2, div.growlUIInfo h3
+{
+	color: white; 
+	padding: 5px 5px 5px 75px; 
+	text-align: left;
+}
+
+div.growlUIErr
+{
+    background: url('../Images/error_notify.png') no-repeat 10px 10px;
+}
+
+div.growlUIErr h1, div.growlUIErr h2, div.growlUIErr h3
+{
+	color: white; 
+	padding: 5px 5px 5px 75px; 
+	text-align: left;
+}
+
+div.button_email:hover
+{
+    background-color: rgb(255, 232, 140);
+}
+
+.linkbutton
+{
+    text-decoration:none;
+    text-align:center;
+    padding:2px;
+    border: solid 1px #10428C;
+    font-size:12px;
+    font-weight:bold;
+    background-color: rgb(214, 231, 255);
+}
+
+.linkbutton:hover
+{
+    background-color: rgb(255, 232, 140);
+}
+
+.linkbutton_email
+{
+    margin:10px 0px 10px 0px;
+    text-decoration:none;
+    text-align:center;
+    padding:10px;   
+    border: solid 1px #10428C;
+    font-size:12px;
+    font-weight:bold;
+    background-color: rgb(214, 231, 255);
+}
+
+.linkbutton_email:hover
+{
+    background-color: rgb(255, 232, 140);
+}
+
+.report_area
+{
+    margin-top: 20px;
+}
+
+.em-construcao
+{
+    text-align:center;
+}
+
+.date-field
+{
+    text-align:center;
+    width:90%;
+}
+
+.datepicker
+{
+    text-align:center;
+}
+
+.uppercase
+{
+    text-transform:uppercase;
+}
+
+.jqgrow{
+    cursor:pointer;
+}
+
+.dialog-link {
+    padding: .4em 1em .4em 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+.dialog-link span.ui-icon {
+    margin: 0 5px 0 0;
+    position: absolute;
+    left: .2em;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.text-right
+{
+    text-align:right;
+}
+
+.text-center
+{
+    text-align:center;
+}
+
+.div-error
+{
+    font-size: small;
+    color: darkred;
+}
+
+.button-juiz
+{
+    background:url('../Images/auction_hammer_gavel.png');
+    background-repeat: no-repeat;
+}
+.button-juizo-vara-delegacia
+{
+    background:url('../Images/scales.png');
+    background-repeat: no-repeat;
+}

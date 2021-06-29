@@ -1,0 +1,193 @@
+﻿body, html
+{
+	height:100%;
+	margin: 0px auto;
+}
+
+body {
+    margin: 0px;
+    text-align: left;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    /*background-color: #BDDEFF;*/
+    background-color: #d9d9d9;
+    /*background-color: #48A4FF;*/
+    min-width: 980px;
+    /*background-image: url('../Images/loginWebjudBackgroundRoundedLogoPresenta.png');*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 512px 210px;*/
+    /*background-position: center;*/
+    /*background-position: 512px 210px;*/
+    /*background-position: top center;*/
+    background-image: url('../Images/logopresenta_ca.png'), url('../Images/page_bg.png');
+    background-size: 326px 340px;
+    background-repeat: no-repeat, repeat-x;
+    background-position: 50% 50px, 0% 0%;
+}
+
+.loginGeral
+{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: small;
+    background-color: transparent;
+    color: White;
+}
+
+.loginTitle
+{
+    font-size: 1.5em;
+}
+
+.loginTextBox
+{
+    height: 30px;
+    width: 335px;
+    background-image: url('../Images/inputlogin.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border-style: none;
+    background-position: 0px 2px;
+    margin-left: -2px;
+    padding-left: 7px;
+    font-weight:bold;
+    /*color: #0F5AA5;*/
+    color: Black;
+}
+
+.loginTextBox:focus
+{
+    background-image: url('../Images/inputlogin.png');
+    margin-left: -2px;
+    background-position: 0px -30px;
+}
+
+.loginButton
+{
+    background-image: url('../Images/button_bg.png');
+    background-repeat:repeat-x;
+    margin-right: 15px;
+    border-style: none;
+    height: 25px;
+    color: White;
+    width: 60px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.loginButton:hover
+{
+    background-image: url('../Images/nav_link_hover.png'); 
+    background-repeat:repeat-x;
+    color: Black;
+    font-weight: bold;
+}
+
+.loginText
+{
+    font-size: small;
+}
+
+.dadosLogin
+{
+    margin-bottom: 50px;
+}
+
+.headerLogin
+{
+    height: 55%;
+}
+
+.changePasswordTextBox
+{
+    height: 30px;
+    width: 225px;
+    background-image: url('../Images/inputchangepw.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border-style: none;
+    background-position: 0px 2px;
+    margin-left: -2px;
+    padding-left: 7px;
+    font-weight:bold;
+    /*color: #0F5AA5;*/
+    color: Black;
+}
+
+.changePasswordTextBox:focus
+{
+    background-image: url('../Images/inputchangepw.png');
+    margin-left: -2px;
+    background-position: 0px -30px;
+}
+
+.changePasswordButton
+{
+    background-image: url('../Images/button_bg.png'); 
+    background-repeat:repeat-x;
+    margin-left: 60px;
+    border-style: none;
+    height: 25px;
+    color: White;
+    width: 100px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.changePasswordButton:hover
+{
+    background-image: url('../Images/nav_link_hover.png'); 
+    background-repeat:repeat-x;
+    color: Black;
+    font-weight: bold;
+}
+
+.loginButton:hover
+{
+    background-image: url('../Images/nav_link_hover.png'); 
+    background-repeat:repeat-x;
+    color: Black;
+    font-weight: bold;
+}
+
+.loginText
+{
+    font-size: small;
+    color: black;
+    font-weight: bold;
+}
+
+.dadosLogin
+{
+    
+}
+
+.headerLogin
+{
+    height: 55%;
+}
+
+.copyright
+{
+    text-align: center;
+    color: #10428C;
+    margin-top: 150px;
+    font-weight: bold;
+}
+
+.footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   /*background:#999;*/
+}
+
+/* IE 6 */
+* html .footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}

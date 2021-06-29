@@ -1,0 +1,14 @@
+﻿.btn_alterar_grid
+{
+    cursor: pointer;
+}
+
+.btn_excluir_grid
+{
+    cursor: pointer;
+}
+
+.btn-upd-panel
+{
+    display: none;
+}

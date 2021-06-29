@@ -1,0 +1,20 @@
+﻿body, html
+{
+	height:100%;
+	margin: 0px auto;
+}
+
+body
+{
+	margin: 0px;
+	text-align: left;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #BDDEFF;
+	/*background-color: #48A4FF;*/
+	min-width: 980px;
+	/*background-image: url('../Images/loginWebjudBackgroundRoundedLogoPresenta.png'); */
+	background-repeat: no-repeat;
+	/*background-position: 512px 210px;*/
+	background-position: center;
+}

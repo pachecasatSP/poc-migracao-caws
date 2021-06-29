@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://presenta.com.br/webservices/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://presenta.com.br/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://presenta.com.br/webservices/">
+      <s:element name="ListarAplicativosPorSistema">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idSistema" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarAplicativosPorSistemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarAplicativosPorSistemaResult" type="tns:ArrayOfAplicativoFlyWeight" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAplicativoFlyWeight">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AplicativoFlyWeight" nillable="true" type="tns:AplicativoFlyWeight" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AplicativoFlyWeight">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descricao" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListarParesDeAplicativos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idAplicativo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarParesDeAplicativosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarParesDeAplicativosResult" type="tns:ArrayOfAplicativoFlyWeight" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarOperadores">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListarOperadoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarOperadoresResult" type="tns:ArrayOfOperadorFlyWeight" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOperadorFlyWeight">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OperadorFlyWeight" nillable="true" type="tns:OperadorFlyWeight" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OperadorFlyWeight">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListarOperadoresAtivosPorAplicativo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idAplicativo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarOperadoresAtivosPorAplicativoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarOperadoresAtivosPorAplicativoResult" type="tns:ArrayOfCaOperadorFlyWeight" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCaOperadorFlyWeight">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CaOperadorFlyWeight" nillable="true" type="tns:CaOperadorFlyWeight" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CaOperadorFlyWeight">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdOperador" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StOperador" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CdOperador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NmOperador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DsEmail" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListarEmails">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListarEmailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarEmailsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeveTrocarSenha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idAplicativo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeveTrocarSenhaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeveTrocarSenhaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsSenhaPadrao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsSenhaPadraoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsSenhaPadraoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrocarSenha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="novaSenha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idAplicativo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrocarSenhaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TrocarSenhaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterTipoAutenticacao">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObterTipoAutenticacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObterTipoAutenticacaoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Autenticar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idAplicativo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutenticarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AutenticarResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Autorizar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idAplicativo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutorizarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutorizarResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObterPerfil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idAplicativo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterPerfilResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterPerfilResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idAplicativo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterInfoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ListarAplicativosPorSistemaSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarAplicativosPorSistema" />
+  </wsdl:message>
+  <wsdl:message name="ListarAplicativosPorSistemaSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarAplicativosPorSistemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarParesDeAplicativosSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarParesDeAplicativos" />
+  </wsdl:message>
+  <wsdl:message name="ListarParesDeAplicativosSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarParesDeAplicativosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarOperadoresSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarOperadores" />
+  </wsdl:message>
+  <wsdl:message name="ListarOperadoresSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarOperadoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarOperadoresAtivosPorAplicativoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarOperadoresAtivosPorAplicativo" />
+  </wsdl:message>
+  <wsdl:message name="ListarOperadoresAtivosPorAplicativoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarOperadoresAtivosPorAplicativoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarEmailsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarEmails" />
+  </wsdl:message>
+  <wsdl:message name="ListarEmailsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarEmailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeveTrocarSenhaSoapIn">
+    <wsdl:part name="parameters" element="tns:DeveTrocarSenha" />
+  </wsdl:message>
+  <wsdl:message name="DeveTrocarSenhaSoapOut">
+    <wsdl:part name="parameters" element="tns:DeveTrocarSenhaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsSenhaPadraoSoapIn">
+    <wsdl:part name="parameters" element="tns:IsSenhaPadrao" />
+  </wsdl:message>
+  <wsdl:message name="IsSenhaPadraoSoapOut">
+    <wsdl:part name="parameters" element="tns:IsSenhaPadraoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TrocarSenhaSoapIn">
+    <wsdl:part name="parameters" element="tns:TrocarSenha" />
+  </wsdl:message>
+  <wsdl:message name="TrocarSenhaSoapOut">
+    <wsdl:part name="parameters" element="tns:TrocarSenhaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterTipoAutenticacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterTipoAutenticacao" />
+  </wsdl:message>
+  <wsdl:message name="ObterTipoAutenticacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterTipoAutenticacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutenticarSoapIn">
+    <wsdl:part name="parameters" element="tns:Autenticar" />
+  </wsdl:message>
+  <wsdl:message name="AutenticarSoapOut">
+    <wsdl:part name="parameters" element="tns:AutenticarResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutorizarSoapIn">
+    <wsdl:part name="parameters" element="tns:Autorizar" />
+  </wsdl:message>
+  <wsdl:message name="AutorizarSoapOut">
+    <wsdl:part name="parameters" element="tns:AutorizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterPerfilSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterPerfil" />
+  </wsdl:message>
+  <wsdl:message name="ObterPerfilSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterPerfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterInfo" />
+  </wsdl:message>
+  <wsdl:message name="ObterInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CAv2ServiceSoap">
+    <wsdl:operation name="ListarAplicativosPorSistema">
+      <wsdl:input message="tns:ListarAplicativosPorSistemaSoapIn" />
+      <wsdl:output message="tns:ListarAplicativosPorSistemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarParesDeAplicativos">
+      <wsdl:input message="tns:ListarParesDeAplicativosSoapIn" />
+      <wsdl:output message="tns:ListarParesDeAplicativosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarOperadores">
+      <wsdl:input message="tns:ListarOperadoresSoapIn" />
+      <wsdl:output message="tns:ListarOperadoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarOperadoresAtivosPorAplicativo">
+      <wsdl:input message="tns:ListarOperadoresAtivosPorAplicativoSoapIn" />
+      <wsdl:output message="tns:ListarOperadoresAtivosPorAplicativoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarEmails">
+      <wsdl:input message="tns:ListarEmailsSoapIn" />
+      <wsdl:output message="tns:ListarEmailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeveTrocarSenha">
+      <wsdl:input message="tns:DeveTrocarSenhaSoapIn" />
+      <wsdl:output message="tns:DeveTrocarSenhaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsSenhaPadrao">
+      <wsdl:input message="tns:IsSenhaPadraoSoapIn" />
+      <wsdl:output message="tns:IsSenhaPadraoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrocarSenha">
+      <wsdl:input message="tns:TrocarSenhaSoapIn" />
+      <wsdl:output message="tns:TrocarSenhaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterTipoAutenticacao">
+      <wsdl:input message="tns:ObterTipoAutenticacaoSoapIn" />
+      <wsdl:output message="tns:ObterTipoAutenticacaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Autenticar">
+      <wsdl:input message="tns:AutenticarSoapIn" />
+      <wsdl:output message="tns:AutenticarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Autorizar">
+      <wsdl:input message="tns:AutorizarSoapIn" />
+      <wsdl:output message="tns:AutorizarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterPerfil">
+      <wsdl:input message="tns:ObterPerfilSoapIn" />
+      <wsdl:output message="tns:ObterPerfilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterInfo">
+      <wsdl:input message="tns:ObterInfoSoapIn" />
+      <wsdl:output message="tns:ObterInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CAv2ServiceSoap" type="tns:CAv2ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListarAplicativosPorSistema">
+      <soap:operation soapAction="http://presenta.com.br/webservices/ListarAplicativosPorSistema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarParesDeAplicativos">
+      <soap:operation soapAction="http://presenta.com.br/webservices/ListarParesDeAplicativos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarOperadores">
+      <soap:operation soapAction="http://presenta.com.br/webservices/ListarOperadores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarOperadoresAtivosPorAplicativo">
+      <soap:operation soapAction="http://presenta.com.br/webservices/ListarOperadoresAtivosPorAplicativo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEmails">
+      <soap:operation soapAction="http://presenta.com.br/webservices/ListarEmails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeveTrocarSenha">
+      <soap:operation soapAction="http://presenta.com.br/webservices/DeveTrocarSenha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsSenhaPadrao">
+      <soap:operation soapAction="http://presenta.com.br/webservices/IsSenhaPadrao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrocarSenha">
+      <soap:operation soapAction="http://presenta.com.br/webservices/TrocarSenha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterTipoAutenticacao">
+      <soap:operation soapAction="http://presenta.com.br/webservices/ObterTipoAutenticacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Autenticar">
+      <soap:operation soapAction="http://presenta.com.br/webservices/Autenticar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Autorizar">
+      <soap:operation soapAction="http://presenta.com.br/webservices/Autorizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterPerfil">
+      <soap:operation soapAction="http://presenta.com.br/webservices/ObterPerfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterInfo">
+      <soap:operation soapAction="http://presenta.com.br/webservices/ObterInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CAv2ServiceSoap12" type="tns:CAv2ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListarAplicativosPorSistema">
+      <soap12:operation soapAction="http://presenta.com.br/webservices/ListarAplicativosPorSistema" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarParesDeAplicativos">
+      <soap12:operation soapAction="http://presenta.com.br/webservices/ListarParesDeAplicativos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarOperadores">
+      <soap12:operation soapAction="http://presenta.com.br/webservices/ListarOperadores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarOperadoresAtivosPorAplicativo">
+      <soap12:operation soapAction="http://presenta.com.br/webservices/ListarOperadoresAtivosPorAplicativo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEmails">
+      <soap12:operation soapAction="http://presenta.com.br/webservices/ListarEmails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeveTrocarSenha">
+      <soap12:operation soapAction="http://presenta.com.br/webservices/DeveTrocarSenha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsSenhaPadrao">
+      <soap12:operation soapAction="http://presenta.com.br/webservices/IsSenhaPadrao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrocarSenha">
+      <soap12:operation soapAction="http://presenta.com.br/webservices/TrocarSenha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterTipoAutenticacao">
+      <soap12:operation soapAction="http://presenta.com.br/webservices/ObterTipoAutenticacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Autenticar">
+      <soap12:operation soapAction="http://presenta.com.br/webservices/Autenticar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Autorizar">
+      <soap12:operation soapAction="http://presenta.com.br/webservices/Autorizar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterPerfil">
+      <soap12:operation soapAction="http://presenta.com.br/webservices/ObterPerfil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterInfo">
+      <soap12:operation soapAction="http://presenta.com.br/webservices/ObterInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CAv2Service">
+    <wsdl:port name="CAv2ServiceSoap" binding="tns:CAv2ServiceSoap">
+      <soap:address location="http://ps5000/CAWSV3/CAv2Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CAv2ServiceSoap12" binding="tns:CAv2ServiceSoap12">
+      <soap12:address location="http://ps5000/CAWSV3/CAv2Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

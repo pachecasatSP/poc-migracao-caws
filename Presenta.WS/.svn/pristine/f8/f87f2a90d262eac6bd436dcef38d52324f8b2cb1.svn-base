@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\_publica_ca_ws" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="03/12/2013 15:30:42" />
+    <file relUrl="bin/Presenta.DBConnection.dll" publishTime="02/15/2013 19:45:30" />
+    <file relUrl="bin/Presenta.Security.Encryption.pdb" publishTime="11/19/2012 18:04:50" />
+    <file relUrl="bin/Presenta.WS.CA.dll" publishTime="07/23/2013 13:49:44" />
+    <file relUrl="bin/Presenta.DBConnection.pdb" publishTime="02/15/2013 19:45:30" />
+    <file relUrl="bin/Presenta.Security.Encryption.dll" publishTime="11/19/2012 18:04:50" />
+    <file relUrl="bin/Presenta.Utils.dll" publishTime="12/05/2012 11:08:37" />
+    <file relUrl="bin/Presenta.CA.Base.pdb" publishTime="01/16/2013 19:56:33" />
+    <file relUrl="bin/Presenta.CA.ClassLibrary.pdb" publishTime="03/12/2013 15:26:57" />
+    <file relUrl="UsuarioService.asmx" publishTime="03/12/2013 13:52:20" />
+    <file relUrl="bin/CryptoNET.dll" publishTime="04/14/2008 00:14:14" />
+    <file relUrl="bin/Presenta.CA.ClassLibrary.dll" publishTime="03/12/2013 15:26:57" />
+    <file relUrl="bin/Presenta.WS.CA.pdb" publishTime="07/23/2013 13:49:43" />
+    <file relUrl="bin/Presenta.Utils.pdb" publishTime="12/05/2012 11:08:37" />
+    <file relUrl="bin/Presenta.CA.Base.dll" publishTime="01/16/2013 19:56:33" />
+  </publishProfile>
+</publishData>

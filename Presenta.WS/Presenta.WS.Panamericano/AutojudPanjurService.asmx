@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="AutojudPanjurService.asmx.cs" Class="Presenta.WS.Panamericano.AutojudPanjurService" %>
